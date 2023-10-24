@@ -20,6 +20,13 @@ export default function EmojiClicker() {
       return prevEmojis.filter((e) => e.id !== id);
     });
   };
+  const makeEverythingAHeart = () => {
+    setEmojis((prevEmojis) => {
+      return prevEmojis.map((e) => {
+        return { ...e, emoji: "🧡" };
+      });
+    });
+  };
   return (
     <div>
       {emojis.map((e) => (
@@ -32,6 +39,7 @@ export default function EmojiClicker() {
         </span>
       ))}
       <button onClick={addEmoji}>Add Emoji</button>
+      <button onClick={makeEverythingAHeart}>Make them Hearts</button>
     </div>
   );
 }
