@@ -6,11 +6,13 @@ function UsernameForm() {
   };
   return (
     <div>
+      <label htmlFor="username">Enter a username</label>
       <input
         type="text"
         placeholder="username"
         value={username}
         onChange={updateUsername}
+        id="username"
       ></input>
       <button>Submit</button>
     </div>
